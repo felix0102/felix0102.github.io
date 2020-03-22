@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>linux7设置IP地址 | Some of my notes</title>
+    <meta name="description" content="Hello, VuePress!">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/favicon.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.24d7f512.css" as="style"><link rel="preload" href="/assets/js/app.34a1b8ef.js" as="script"><link rel="preload" href="/assets/js/2.f559ad11.js" as="script"><link rel="preload" href="/assets/js/15.aee4863e.js" as="script"><link rel="prefetch" href="/assets/js/10.2608dc1a.js"><link rel="prefetch" href="/assets/js/11.39b2ba4a.js"><link rel="prefetch" href="/assets/js/12.a1360753.js"><link rel="prefetch" href="/assets/js/13.e63bef7e.js"><link rel="prefetch" href="/assets/js/14.14a24a57.js"><link rel="prefetch" href="/assets/js/16.ef9428bc.js"><link rel="prefetch" href="/assets/js/17.547e7f72.js"><link rel="prefetch" href="/assets/js/18.edc0d54b.js"><link rel="prefetch" href="/assets/js/19.70affd3a.js"><link rel="prefetch" href="/assets/js/20.0decd2c6.js"><link rel="prefetch" href="/assets/js/21.597998e4.js"><link rel="prefetch" href="/assets/js/22.40e1d290.js"><link rel="prefetch" href="/assets/js/23.7e4722e5.js"><link rel="prefetch" href="/assets/js/24.b3d62dba.js"><link rel="prefetch" href="/assets/js/25.41976cbc.js"><link rel="prefetch" href="/assets/js/26.9e9a297b.js"><link rel="prefetch" href="/assets/js/27.5e15f6e5.js"><link rel="prefetch" href="/assets/js/28.b1cafb8f.js"><link rel="prefetch" href="/assets/js/29.84b994c3.js"><link rel="prefetch" href="/assets/js/3.e001c50f.js"><link rel="prefetch" href="/assets/js/30.f6ca9ef4.js"><link rel="prefetch" href="/assets/js/31.0bb2f736.js"><link rel="prefetch" href="/assets/js/32.4a0cfbbc.js"><link rel="prefetch" href="/assets/js/33.a281b8f9.js"><link rel="prefetch" href="/assets/js/34.557f59e6.js"><link rel="prefetch" href="/assets/js/35.2385d8b4.js"><link rel="prefetch" href="/assets/js/36.4874db2f.js"><link rel="prefetch" href="/assets/js/37.56b4b064.js"><link rel="prefetch" href="/assets/js/38.63adfe75.js"><link rel="prefetch" href="/assets/js/39.9d06c3f5.js"><link rel="prefetch" href="/assets/js/4.930da875.js"><link rel="prefetch" href="/assets/js/40.e4dbcef7.js"><link rel="prefetch" href="/assets/js/41.bd6f551e.js"><link rel="prefetch" href="/assets/js/42.004ae80d.js"><link rel="prefetch" href="/assets/js/43.a26b32d0.js"><link rel="prefetch" href="/assets/js/44.be3dae87.js"><link rel="prefetch" href="/assets/js/45.4724773e.js"><link rel="prefetch" href="/assets/js/46.a7c27374.js"><link rel="prefetch" href="/assets/js/47.b2421981.js"><link rel="prefetch" href="/assets/js/48.a7e80ece.js"><link rel="prefetch" href="/assets/js/49.c345484d.js"><link rel="prefetch" href="/assets/js/5.95b601e0.js"><link rel="prefetch" href="/assets/js/50.73fc3959.js"><link rel="prefetch" href="/assets/js/51.8aa3f0fb.js"><link rel="prefetch" href="/assets/js/52.dfaeeda0.js"><link rel="prefetch" href="/assets/js/53.22f25293.js"><link rel="prefetch" href="/assets/js/54.65f07f90.js"><link rel="prefetch" href="/assets/js/55.2830f1d0.js"><link rel="prefetch" href="/assets/js/56.485d0c28.js"><link rel="prefetch" href="/assets/js/57.965d8c16.js"><link rel="prefetch" href="/assets/js/58.19e4abef.js"><link rel="prefetch" href="/assets/js/59.a46e68b8.js"><link rel="prefetch" href="/assets/js/6.02a7b41e.js"><link rel="prefetch" href="/assets/js/60.960e8334.js"><link rel="prefetch" href="/assets/js/61.6ca55482.js"><link rel="prefetch" href="/assets/js/62.d5ed6b18.js"><link rel="prefetch" href="/assets/js/63.07a07799.js"><link rel="prefetch" href="/assets/js/64.4deb6444.js"><link rel="prefetch" href="/assets/js/65.9fa1d7c2.js"><link rel="prefetch" href="/assets/js/66.8ef0f780.js"><link rel="prefetch" href="/assets/js/67.58fa88c9.js"><link rel="prefetch" href="/assets/js/68.4c029b11.js"><link rel="prefetch" href="/assets/js/69.d42fffa3.js"><link rel="prefetch" href="/assets/js/7.473cda5e.js"><link rel="prefetch" href="/assets/js/70.d75326e7.js"><link rel="prefetch" href="/assets/js/71.a7047f09.js"><link rel="prefetch" href="/assets/js/72.0b3aeaf0.js"><link rel="prefetch" href="/assets/js/73.38cd107e.js"><link rel="prefetch" href="/assets/js/74.81588c5c.js"><link rel="prefetch" href="/assets/js/8.7c65fcfa.js"><link rel="prefetch" href="/assets/js/9.10574003.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.24d7f512.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Some of my notes</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/linux/" class="nav-link router-link-active">
+  Linux
+</a></div><div class="nav-item"><a href="/shell/" class="nav-link">
+  Shell
+</a></div><div class="nav-item"><a href="/open-source/" class="nav-link">
+  open-source
+</a></div><div class="nav-item"><a href="/mac/" class="nav-link">
+  Mac
+</a></div><div class="nav-item"><a href="/oracle/" class="nav-link">
+  Oracle
+</a></div><div class="nav-item"><a href="/oci/" class="nav-link">
+  OCI
+</a></div><div class="nav-item"><a href="/spring/" class="nav-link">
+  Spring
+</a></div><div class="nav-item"><a href="/more/" class="nav-link">
+  More
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/linux/" class="nav-link router-link-active">
+  Linux
+</a></div><div class="nav-item"><a href="/shell/" class="nav-link">
+  Shell
+</a></div><div class="nav-item"><a href="/open-source/" class="nav-link">
+  open-source
+</a></div><div class="nav-item"><a href="/mac/" class="nav-link">
+  Mac
+</a></div><div class="nav-item"><a href="/oracle/" class="nav-link">
+  Oracle
+</a></div><div class="nav-item"><a href="/oci/" class="nav-link">
+  OCI
+</a></div><div class="nav-item"><a href="/spring/" class="nav-link">
+  Spring
+</a></div><div class="nav-item"><a href="/more/" class="nav-link">
+  More
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>linux</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/linux/" class="sidebar-link">首页</a></li><li><a href="/linux/crontab.html" class="sidebar-link">定时执行 crontab</a></li><li><a href="/linux/docker.html" class="sidebar-link">Docker 常用命令</a></li><li><a href="/linux/linux-info.html" class="sidebar-link">查看系统信息</a></li><li><a href="/linux/linux-iptables.html" class="sidebar-link">iptable 基本用法</a></li><li><a href="/linux/linux-lang-locale.html" class="sidebar-link">setlocale: LC_CTYPE:</a></li><li><a href="/linux/linux-passwd.html" class="sidebar-link">修改linux的密码策略</a></li><li><a href="/linux/oracle-linux-7.html" class="sidebar-link">修改用户的主目录</a></li><li><a href="/linux/oracle-linux-7-firewall.html" class="sidebar-link">linux 7 防火墙 firewall</a></li><li><a href="/linux/oracle-linux-7-ip.html" class="active sidebar-link">linux7设置IP地址</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/linux/oracle-linux-7-selinux.html" class="sidebar-link">查看selinux状态</a></li><li><a href="/linux/oracle-linux-7-ssh.html" class="sidebar-link">SSH登录时开启密码登录模式</a></li><li><a href="/linux/oracle-linux-7-systemd.html" class="sidebar-link">service template</a></li><li><a href="/linux/oracle-linux-swap.html" class="sidebar-link">修改Swap空间大小</a></li><li><a href="/linux/yum-chrome.html" class="sidebar-link">yum 查看已经安装的软件</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="dhcp-ip"><a href="#dhcp-ip" class="header-anchor">#</a> dhcp ip</h3> <div class="language- extra-class"><pre class="language-text"><code>DEVICE=eth0
+BOOTPROTO=DHCP
+ONBOOT=yes
+
+</code></pre></div><h3 id="static-ip"><a href="#static-ip" class="header-anchor">#</a> static ip</h3> <div class="language- extra-class"><pre class="language-text"><code>DEVICE=eth0
+BOOTPROTO=static
+IPADDR=146.175.139.13
+NETMASK=255.255.255.0
+GATEWAY=146.175.139.255
+HWADDR=00:25:90:81:5e:64
+NM_COnTROLLED=no		
+ONBOOT=yes
+TYPE=Ethernet
+IPV6INIT=no
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新:</span> <span class="time">3/22/2020, 12:33:29 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/linux/oracle-linux-7-firewall.html" class="prev">
+        linux 7 防火墙 firewall
+      </a></span> <span class="next"><a href="/linux/oracle-linux-7-selinux.html">
+        查看selinux状态
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.34a1b8ef.js" defer></script><script src="/assets/js/2.f559ad11.js" defer></script><script src="/assets/js/15.aee4863e.js" defer></script>
+  </body>
+</html>
