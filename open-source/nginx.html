@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>nginx 常用配置 | Some of my notes</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="Hello, VuePress!">
+    <link rel="preload" href="/assets/css/0.styles.ccac5a78.css" as="style"><link rel="preload" href="/assets/js/app.1bdc9612.js" as="script"><link rel="preload" href="/assets/js/2.1ce52c5d.js" as="script"><link rel="preload" href="/assets/js/71.fb6f6189.js" as="script"><link rel="prefetch" href="/assets/js/10.7604792c.js"><link rel="prefetch" href="/assets/js/100.54bb7d3b.js"><link rel="prefetch" href="/assets/js/101.93f1ea81.js"><link rel="prefetch" href="/assets/js/102.44c6dc4c.js"><link rel="prefetch" href="/assets/js/11.fbfee2dd.js"><link rel="prefetch" href="/assets/js/12.47589572.js"><link rel="prefetch" href="/assets/js/13.da8d1a6c.js"><link rel="prefetch" href="/assets/js/14.6a411613.js"><link rel="prefetch" href="/assets/js/15.d3299691.js"><link rel="prefetch" href="/assets/js/16.6529f869.js"><link rel="prefetch" href="/assets/js/17.3abce8c1.js"><link rel="prefetch" href="/assets/js/18.d321540d.js"><link rel="prefetch" href="/assets/js/19.9b0c4efe.js"><link rel="prefetch" href="/assets/js/20.bdfdc27a.js"><link rel="prefetch" href="/assets/js/21.a197c78c.js"><link rel="prefetch" href="/assets/js/22.11e43f38.js"><link rel="prefetch" href="/assets/js/23.8ed6a2cd.js"><link rel="prefetch" href="/assets/js/24.c0aafb51.js"><link rel="prefetch" href="/assets/js/25.a251ec12.js"><link rel="prefetch" href="/assets/js/26.9c73ce08.js"><link rel="prefetch" href="/assets/js/27.0f68e974.js"><link rel="prefetch" href="/assets/js/28.dda890e2.js"><link rel="prefetch" href="/assets/js/29.e4c94034.js"><link rel="prefetch" href="/assets/js/3.50744ef0.js"><link rel="prefetch" href="/assets/js/30.6a2b5705.js"><link rel="prefetch" href="/assets/js/31.dbfd828d.js"><link rel="prefetch" href="/assets/js/32.4ec21949.js"><link rel="prefetch" href="/assets/js/33.31d58b63.js"><link rel="prefetch" href="/assets/js/34.ab44651b.js"><link rel="prefetch" href="/assets/js/35.78e82986.js"><link rel="prefetch" href="/assets/js/36.00c61c64.js"><link rel="prefetch" href="/assets/js/37.1eb74be4.js"><link rel="prefetch" href="/assets/js/38.3e813362.js"><link rel="prefetch" href="/assets/js/39.647b508b.js"><link rel="prefetch" href="/assets/js/4.a7ac34a6.js"><link rel="prefetch" href="/assets/js/40.c783cf11.js"><link rel="prefetch" href="/assets/js/41.40bb819b.js"><link rel="prefetch" href="/assets/js/42.487d2b5b.js"><link rel="prefetch" href="/assets/js/43.cd2ed31c.js"><link rel="prefetch" href="/assets/js/44.212273f2.js"><link rel="prefetch" href="/assets/js/45.2d56bfe3.js"><link rel="prefetch" href="/assets/js/46.745a74a8.js"><link rel="prefetch" href="/assets/js/47.20d54662.js"><link rel="prefetch" href="/assets/js/48.24df1f1f.js"><link rel="prefetch" href="/assets/js/49.efe4f912.js"><link rel="prefetch" href="/assets/js/5.a6bf4d86.js"><link rel="prefetch" href="/assets/js/50.240683fd.js"><link rel="prefetch" href="/assets/js/51.69d75721.js"><link rel="prefetch" href="/assets/js/52.3e48cd30.js"><link rel="prefetch" href="/assets/js/53.3f5efb27.js"><link rel="prefetch" href="/assets/js/54.84e054cb.js"><link rel="prefetch" href="/assets/js/55.dd74fcad.js"><link rel="prefetch" href="/assets/js/56.2cdddc9b.js"><link rel="prefetch" href="/assets/js/57.31388f8e.js"><link rel="prefetch" href="/assets/js/58.1cf23f34.js"><link rel="prefetch" href="/assets/js/59.a66bc6e3.js"><link rel="prefetch" href="/assets/js/6.5666a477.js"><link rel="prefetch" href="/assets/js/60.2f9ad10d.js"><link rel="prefetch" href="/assets/js/61.ca08e66b.js"><link rel="prefetch" href="/assets/js/62.73b03dc4.js"><link rel="prefetch" href="/assets/js/63.95143f10.js"><link rel="prefetch" href="/assets/js/64.ca12f361.js"><link rel="prefetch" href="/assets/js/65.c9868457.js"><link rel="prefetch" href="/assets/js/66.d961caec.js"><link rel="prefetch" href="/assets/js/67.f4463c14.js"><link rel="prefetch" href="/assets/js/68.763e362c.js"><link rel="prefetch" href="/assets/js/69.eb5440bc.js"><link rel="prefetch" href="/assets/js/7.e50c1d2e.js"><link rel="prefetch" href="/assets/js/70.13b90785.js"><link rel="prefetch" href="/assets/js/72.17356d70.js"><link rel="prefetch" href="/assets/js/73.8037a311.js"><link rel="prefetch" href="/assets/js/74.e1fecc35.js"><link rel="prefetch" href="/assets/js/75.75ac11fd.js"><link rel="prefetch" href="/assets/js/76.2a376568.js"><link rel="prefetch" href="/assets/js/77.2f912849.js"><link rel="prefetch" href="/assets/js/78.cb45b9f4.js"><link rel="prefetch" href="/assets/js/79.e99f3946.js"><link rel="prefetch" href="/assets/js/8.a7bf67bd.js"><link rel="prefetch" href="/assets/js/80.98f7a9b8.js"><link rel="prefetch" href="/assets/js/81.77673ce8.js"><link rel="prefetch" href="/assets/js/82.6da9e559.js"><link rel="prefetch" href="/assets/js/83.a226a6f5.js"><link rel="prefetch" href="/assets/js/84.149db13e.js"><link rel="prefetch" href="/assets/js/85.a0f59112.js"><link rel="prefetch" href="/assets/js/86.b3f3292d.js"><link rel="prefetch" href="/assets/js/87.17a04e28.js"><link rel="prefetch" href="/assets/js/88.0a2115b8.js"><link rel="prefetch" href="/assets/js/89.31db3c7e.js"><link rel="prefetch" href="/assets/js/9.90e0f26f.js"><link rel="prefetch" href="/assets/js/90.c81c9788.js"><link rel="prefetch" href="/assets/js/91.244d9fab.js"><link rel="prefetch" href="/assets/js/92.40c1f6fa.js"><link rel="prefetch" href="/assets/js/93.6e11e9dd.js"><link rel="prefetch" href="/assets/js/94.5f3326b2.js"><link rel="prefetch" href="/assets/js/95.ee7c907b.js"><link rel="prefetch" href="/assets/js/96.1cc91fcf.js"><link rel="prefetch" href="/assets/js/97.380010c8.js"><link rel="prefetch" href="/assets/js/98.dba928b5.js"><link rel="prefetch" href="/assets/js/99.bcb7b171.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ccac5a78.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Some of my notes</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/shell/" class="nav-link">
+  Shell
+</a></div><div class="nav-item"><a href="/open-source/" class="nav-link router-link-active">
+  open-source
+</a></div><div class="nav-item"><a href="/mac/" class="nav-link">
+  Mac
+</a></div><div class="nav-item"><a href="/oracle/" class="nav-link">
+  Oracle
+</a></div><div class="nav-item"><a href="/oci/" class="nav-link">
+  OCI
+</a></div><div class="nav-item"><a href="/spring/" class="nav-link">
+  Spring
+</a></div><div class="nav-item"><a href="/more/" class="nav-link">
+  More
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/shell/" class="nav-link">
+  Shell
+</a></div><div class="nav-item"><a href="/open-source/" class="nav-link router-link-active">
+  open-source
+</a></div><div class="nav-item"><a href="/mac/" class="nav-link">
+  Mac
+</a></div><div class="nav-item"><a href="/oracle/" class="nav-link">
+  Oracle
+</a></div><div class="nav-item"><a href="/oci/" class="nav-link">
+  OCI
+</a></div><div class="nav-item"><a href="/spring/" class="nav-link">
+  Spring
+</a></div><div class="nav-item"><a href="/more/" class="nav-link">
+  More
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>open-source</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/open-source/" aria-current="page" class="sidebar-link">常用开源License</a></li><li><a href="/open-source/aria2.html" class="sidebar-link">aria2 aria2c</a></li><li><a href="/open-source/curl.html" class="sidebar-link">curl 使用</a></li><li><a href="/open-source/git.html" class="sidebar-link">git 基本用法</a></li><li><a href="/open-source/jenkins.html" class="sidebar-link">jenkins tutorial</a></li><li><a href="/open-source/nginx.html" aria-current="page" class="active sidebar-link">nginx 常用配置</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/open-source/nginx.html#配置反向代理" class="sidebar-link">配置反向代理</a></li><li class="sidebar-sub-header"><a href="/open-source/nginx.html#配置gzip功能" class="sidebar-link">配置gzip功能</a></li><li class="sidebar-sub-header"><a href="/open-source/nginx.html#配置代理缓存" class="sidebar-link">配置代理缓存</a></li><li class="sidebar-sub-header"><a href="/open-source/nginx.html#errors" class="sidebar-link">errors</a></li><li class="sidebar-sub-header"><a href="/open-source/nginx.html#reqeust-time" class="sidebar-link">Reqeust time</a></li><li class="sidebar-sub-header"><a href="/open-source/nginx.html#reference-link" class="sidebar-link">Reference Link</a></li></ul></li><li><a href="/open-source/node.html" class="sidebar-link">nodejs</a></li><li><a href="/open-source/ssh.html" class="sidebar-link">ssh 常用功能</a></li><li><a href="/open-source/ssh-key-pair.html" class="sidebar-link">SSH Key Pair</a></li><li><a href="/open-source/vim.html" class="sidebar-link">vi vim tutorial</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="nginx-yum-install"><a href="#nginx-yum-install" class="header-anchor">#</a> nginx yum install</h3> <ul><li><a href="http://nginx.org/en/linux_packages.html" target="_blank" rel="noopener noreferrer">yum repo<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul> <div class="language- extra-class"><pre class="language-text"><code>[nginx-stable]
+name=nginx stable repo
+baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
+gpgcheck=1
+enabled=1
+gpgkey=https://nginx.org/keys/nginx_signing.key
+module_hotfixes=true
+
+[nginx-mainline]
+name=nginx mainline repo
+baseurl=http://nginx.org/packages/mainline/centos/$releasever/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=https://nginx.org/keys/nginx_signing.key
+module_hotfixes=true
+</code></pre></div><h2 id="配置反向代理"><a href="#配置反向代理" class="header-anchor">#</a> 配置反向代理</h2> <h3 id="配置反向代理例子"><a href="#配置反向代理例子" class="header-anchor">#</a> 配置反向代理例子</h3> <div class="language- extra-class"><pre class="language-text"><code>server {
+        listen       80;
+        server_name  localhost;
+        location / {
+         rewrite ^/(.*) https://$host/$1 permanent;
+        }
+    }
+
+       server {
+        listen 443 ssl;
+        error_page  404 404.html;
+        server_name _;
+        ssl_certificate &quot;/etc/nginx/server.crt&quot;;
+        ssl_certificate_key &quot;/etc/nginx/server.key&quot;;
+        ssl_session_timeout 5m;
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2; #按照这个协议配置
+        ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;#按照这个套件配置
+        ssl_prefer_server_ciphers on;
+        location / {
+            proxy_set_header Host $host:$server_port;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_pass https://132.145.230.64;
+        }
+    }
+</code></pre></div><h2 id="配置gzip功能"><a href="#配置gzip功能" class="header-anchor">#</a> 配置gzip功能</h2> <h3 id="gzip-打开例子"><a href="#gzip-打开例子" class="header-anchor">#</a> gzip 打开例子</h3> <p>ginx实现资源压缩的原理是通过ngx_http_gzip_module模块拦截请求，并对需要做gzip的类型做gzip，ngx_http_gzip_module是Nginx默认集成的，不需要重新编译，直接开启即可。</p> <div class="language- extra-class"><pre class="language-text"><code>gzip on;
+gzip_min_length  5k;
+gzip_buffers     4 16k;
+#gzip_http_version 1.0;
+gzip_comp_level 3;
+gzip_types       text/plain application/javascript text/css application/xml text/javascript application/x-httpd-php image/jpeg image/gif image/png;
+gzip_vary on;
+</code></pre></div><h3 id="配置指令详细注释"><a href="#配置指令详细注释" class="header-anchor">#</a> 配置指令详细注释</h3> <div class="language- extra-class"><pre class="language-text"><code>gzip on|off
+# 默认值: gzip off
+# 开启或者关闭gzip模块
+
+gzip_static on|off
+
+# nginx对于静态文件的处理模块
+# 该模块可以读取预先压缩的gz文件，这样可以减少每次请求进行gzip压缩的CPU资源消耗。该模块启用后，nginx首先检查是否存在请求静态文件的gz结尾的文件，如果有则直接返回该gz文件内容。为了要兼容不支持gzip的浏览器，启用gzip_static模块就必须同时保留原始静态文件和gz文件。这样的话，在有大量静态文件的情况下，将会大大增加磁盘空间。我们可以利用nginx的反向代理功能实现只保留gz文件。
+# 可以google&quot;nginx gzip_static&quot;了解更多
+
+gzip_comp_level 4
+
+# 默认值：1(建议选择为4)
+# gzip压缩比/压缩级别，压缩级别 1-9，级别越高压缩率越大，当然压缩时间也就越长（传输快但比较消耗cpu）。
+
+gzip_buffers 4 16k
+
+# 默认值: gzip_buffers 4 4k/8k
+# 设置系统获取几个单位的缓存用于存储gzip的压缩结果数据流。 例如 4 4k 代表以4k为单位，按照原始数据大小以4k为单位的4倍申请内存。 4 8k 代表以8k为单位，按照原始数据大小以8k为单位的4倍申请内存。
+# 如果没有设置，默认值是申请跟原始数据相同大小的内存空间去存储gzip压缩结果。
+
+gzip_types mime-type [mime-type ...]
+
+# 默认值: gzip_types text/html (默认不对js/css文件进行压缩)
+# 压缩类型，匹配MIME类型进行压缩
+# 不能用通配符 text/*
+# (无论是否指定)text/html默认已经压缩
+# 设置哪压缩种文本文件可参考 conf/mime.types
+
+gzip_min_length  1k
+
+# 默认值: 0 ，不管页面多大都压缩
+# 设置允许压缩的页面最小字节数，页面字节数从header头中的Content-Length中进行获取。
+# 建议设置成大于1k的字节数，小于1k可能会越压越大。 即: gzip_min_length 1024
+
+gzip_http_version 1.0|1.1
+
+# 默认值: gzip_http_version 1.1(就是说对HTTP/1.1协议的请求才会进行gzip压缩)
+# 识别http的协议版本。由于早期的一些浏览器或者http客户端，可能不支持gzip自解压，用户就会看到乱码，所以做一些判断还是有必要的。
+# 注：99.99%的浏览器基本上都支持gzip解压了，所以可以不用设这个值,保持系统默认即可。
+# 假设我们使用的是默认值1.1，如果我们使用了proxy_pass进行反向代理，那么nginx和后端的upstream server之间是用HTTP/1.0协议通信的，如果我们使用nginx通过反向代理做Cache Server，而且前端的nginx没有开启gzip，同时，我们后端的nginx上没有设置gzip_http_version为1.0，那么Cache的url将不会进行gzip压缩
+
+gzip_proxied [off|expired|no-cache|no-store|private|no_last_modified|no_etag|auth|any] ...
+
+# 默认值：off
+# Nginx作为反向代理的时候启用，开启或者关闭后端服务器返回的结果，匹配的前提是后端服务器必须要返回包含&quot;Via&quot;的 header头。
+off - 关闭所有的代理结果数据的压缩
+expired - 启用压缩，如果header头中包含 &quot;Expires&quot; 头信息
+no-cache - 启用压缩，如果header头中包含 &quot;Cache-Control:no-cache&quot; 头信息
+no-store - 启用压缩，如果header头中包含 &quot;Cache-Control:no-store&quot; 头信息
+private - 启用压缩，如果header头中包含 &quot;Cache-Control:private&quot; 头信息
+no_last_modified - 启用压缩,如果header头中不包含 &quot;Last-Modified&quot; 头信息
+no_etag - 启用压缩 ,如果header头中不包含 &quot;ETag&quot; 头信息
+auth - 启用压缩 , 如果header头中包含 &quot;Authorization&quot; 头信息
+any - 无条件启用压缩
+
+gzip_vary on
+
+# 和http头有关系，加个vary头，给代理服务器用的，有的浏览器支持压缩，有的不支持，所以避免浪费不支持的也压缩，所以根据客户端的HTTP头来判断，是否需要压缩
+
+gzip_disable &quot;MSIE [1-6].&quot;
+
+# 禁用IE6的gzip压缩，又是因为杯具的IE6。当然，IE6目前依然广泛的存在，所以这里你也可以设置为“MSIE [1-5].”
+# IE6的某些版本对gzip的压缩支持很不好，会造成页面的假死，今天产品的同学就测试出了这个问题
+后来调试后，发现是对img进行gzip后造成IE6的假死，把对img的gzip压缩去掉后就正常了
+为了确保其它的IE6版本不出问题，所以建议加上gzip_disable的设置
+</code></pre></div><h2 id="配置代理缓存"><a href="#配置代理缓存" class="header-anchor">#</a> 配置代理缓存</h2> <div class="language- extra-class"><pre class="language-text"><code>proxy_cache_path /cache levels=1:2 keys_zone=cache:10m max_size=10g inactive=60m use_temp_path=off;
+
+server{
+	listen 80;
+	server_name proxya.com;
+	location / {
+		proxy_pass http://proxyb.com;
+	}
+	location ~ .*\.(gif|jpg|png|css|js|svg)(.*)  {
+        proxy_pass http://proxyb.com;
+		proxy_cache cache;
+    	proxy_cache_valid   200 304 12h;
+    	proxy_cache_valid   any 10m;
+    	add_header  Nginx-Cache &quot;$upstream_cache_status&quot;;
+        add_header X-Cache-Status $upstream_cache_status;
+		proxy_cache_key $host$uri$is_args$args;
+	}
+}
+
+# proxy_cache_path 缓存文件存放位置
+# levels=1:2       代表缓存的目录结构为2级目录
+# keys_zone=cache:10m 申请一个10兆的空间存在缓存的key 名称为cache
+# max_size 最大存储缓存的空间10G
+# inactive 未被访问文件在缓存中保留时间，本配置中如果60分钟未被访问则不论状态是否为expired，缓存控制程序会删掉文件。inactive默认是10分钟。
+           需要注意的是，inactive和expired配置项的含义是不同的，expired只是缓存过期，但不会被删除，inactive是删除指定时间内未被访问的缓存文件
+# use_temp_path 如果为off，则nginx会将缓存文件直接写入指定的cache文件中，而不是使用temp_path存储。
+# proxy_cache cache;  启动名称为cache的缓存
+# proxy_cache_valid 200 302 10m; 只对响应码为200，301，302的访问请求资源设置缓存时间10m
+Can the NGINX Cache Be Instrumented?
+Yes, with the add_header directive:
+add_header X-Cache-Status $upstream_cache_status;
+</code></pre></div><h2 id="errors"><a href="#errors" class="header-anchor">#</a> errors</h2> <h3 id="_13-permission-denied-while-connecting-to-upstream-nginx"><a href="#_13-permission-denied-while-connecting-to-upstream-nginx" class="header-anchor">#</a> (13: Permission denied) while connecting to upstream:[nginx]</h3> <div class="language- extra-class"><pre class="language-text"><code>I had a similar issue getting Fedora 20, Nginx, Node.js, and Ghost (blog) to work. It turns out my issue was due to SELinux.
+
+This should solve the problem:
+
+setsebool -P httpd_can_network_connect 1
+Details
+I checked for errors in the SELinux logs:
+
+sudo cat /var/log/audit/audit.log | grep nginx | grep denied
+And found that running the following commands fixed my issue:
+
+sudo cat /var/log/audit/audit.log | grep nginx | grep denied | audit2allow -M mynginx
+sudo semodule -i mynginx.pp
+</code></pre></div><h2 id="reqeust-time"><a href="#reqeust-time" class="header-anchor">#</a> Reqeust time</h2> <ul><li>https://blog.csdn.net/yangyangye/article/details/105819628</li></ul> <h2 id="reference-link"><a href="#reference-link" class="header-anchor">#</a> Reference Link</h2> <ul><li>https://blog.csdn.net/Michaelwubo/article/details/81865756</li> <li>https://www.nginx.com/blog/nginx-caching-guide/</li> <li>http://nginx.org/en/docs/</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/open-source/jenkins.html" class="prev">
+        jenkins tutorial
+      </a></span> <span class="next"><a href="/open-source/node.html">
+        nodejs
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.1bdc9612.js" defer></script><script src="/assets/js/2.1ce52c5d.js" defer></script><script src="/assets/js/71.fb6f6189.js" defer></script>
+  </body>
+</html>

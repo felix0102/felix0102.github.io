@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ssh 常用功能 | Some of my notes</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="Hello, VuePress!">
+    <link rel="preload" href="/assets/css/0.styles.ccac5a78.css" as="style"><link rel="preload" href="/assets/js/app.1bdc9612.js" as="script"><link rel="preload" href="/assets/js/2.1ce52c5d.js" as="script"><link rel="preload" href="/assets/js/74.e1fecc35.js" as="script"><link rel="prefetch" href="/assets/js/10.7604792c.js"><link rel="prefetch" href="/assets/js/100.54bb7d3b.js"><link rel="prefetch" href="/assets/js/101.93f1ea81.js"><link rel="prefetch" href="/assets/js/102.44c6dc4c.js"><link rel="prefetch" href="/assets/js/11.fbfee2dd.js"><link rel="prefetch" href="/assets/js/12.47589572.js"><link rel="prefetch" href="/assets/js/13.da8d1a6c.js"><link rel="prefetch" href="/assets/js/14.6a411613.js"><link rel="prefetch" href="/assets/js/15.d3299691.js"><link rel="prefetch" href="/assets/js/16.6529f869.js"><link rel="prefetch" href="/assets/js/17.3abce8c1.js"><link rel="prefetch" href="/assets/js/18.d321540d.js"><link rel="prefetch" href="/assets/js/19.9b0c4efe.js"><link rel="prefetch" href="/assets/js/20.bdfdc27a.js"><link rel="prefetch" href="/assets/js/21.a197c78c.js"><link rel="prefetch" href="/assets/js/22.11e43f38.js"><link rel="prefetch" href="/assets/js/23.8ed6a2cd.js"><link rel="prefetch" href="/assets/js/24.c0aafb51.js"><link rel="prefetch" href="/assets/js/25.a251ec12.js"><link rel="prefetch" href="/assets/js/26.9c73ce08.js"><link rel="prefetch" href="/assets/js/27.0f68e974.js"><link rel="prefetch" href="/assets/js/28.dda890e2.js"><link rel="prefetch" href="/assets/js/29.e4c94034.js"><link rel="prefetch" href="/assets/js/3.50744ef0.js"><link rel="prefetch" href="/assets/js/30.6a2b5705.js"><link rel="prefetch" href="/assets/js/31.dbfd828d.js"><link rel="prefetch" href="/assets/js/32.4ec21949.js"><link rel="prefetch" href="/assets/js/33.31d58b63.js"><link rel="prefetch" href="/assets/js/34.ab44651b.js"><link rel="prefetch" href="/assets/js/35.78e82986.js"><link rel="prefetch" href="/assets/js/36.00c61c64.js"><link rel="prefetch" href="/assets/js/37.1eb74be4.js"><link rel="prefetch" href="/assets/js/38.3e813362.js"><link rel="prefetch" href="/assets/js/39.647b508b.js"><link rel="prefetch" href="/assets/js/4.a7ac34a6.js"><link rel="prefetch" href="/assets/js/40.c783cf11.js"><link rel="prefetch" href="/assets/js/41.40bb819b.js"><link rel="prefetch" href="/assets/js/42.487d2b5b.js"><link rel="prefetch" href="/assets/js/43.cd2ed31c.js"><link rel="prefetch" href="/assets/js/44.212273f2.js"><link rel="prefetch" href="/assets/js/45.2d56bfe3.js"><link rel="prefetch" href="/assets/js/46.745a74a8.js"><link rel="prefetch" href="/assets/js/47.20d54662.js"><link rel="prefetch" href="/assets/js/48.24df1f1f.js"><link rel="prefetch" href="/assets/js/49.efe4f912.js"><link rel="prefetch" href="/assets/js/5.a6bf4d86.js"><link rel="prefetch" href="/assets/js/50.240683fd.js"><link rel="prefetch" href="/assets/js/51.69d75721.js"><link rel="prefetch" href="/assets/js/52.3e48cd30.js"><link rel="prefetch" href="/assets/js/53.3f5efb27.js"><link rel="prefetch" href="/assets/js/54.84e054cb.js"><link rel="prefetch" href="/assets/js/55.dd74fcad.js"><link rel="prefetch" href="/assets/js/56.2cdddc9b.js"><link rel="prefetch" href="/assets/js/57.31388f8e.js"><link rel="prefetch" href="/assets/js/58.1cf23f34.js"><link rel="prefetch" href="/assets/js/59.a66bc6e3.js"><link rel="prefetch" href="/assets/js/6.5666a477.js"><link rel="prefetch" href="/assets/js/60.2f9ad10d.js"><link rel="prefetch" href="/assets/js/61.ca08e66b.js"><link rel="prefetch" href="/assets/js/62.73b03dc4.js"><link rel="prefetch" href="/assets/js/63.95143f10.js"><link rel="prefetch" href="/assets/js/64.ca12f361.js"><link rel="prefetch" href="/assets/js/65.c9868457.js"><link rel="prefetch" href="/assets/js/66.d961caec.js"><link rel="prefetch" href="/assets/js/67.f4463c14.js"><link rel="prefetch" href="/assets/js/68.763e362c.js"><link rel="prefetch" href="/assets/js/69.eb5440bc.js"><link rel="prefetch" href="/assets/js/7.e50c1d2e.js"><link rel="prefetch" href="/assets/js/70.13b90785.js"><link rel="prefetch" href="/assets/js/71.fb6f6189.js"><link rel="prefetch" href="/assets/js/72.17356d70.js"><link rel="prefetch" href="/assets/js/73.8037a311.js"><link rel="prefetch" href="/assets/js/75.75ac11fd.js"><link rel="prefetch" href="/assets/js/76.2a376568.js"><link rel="prefetch" href="/assets/js/77.2f912849.js"><link rel="prefetch" href="/assets/js/78.cb45b9f4.js"><link rel="prefetch" href="/assets/js/79.e99f3946.js"><link rel="prefetch" href="/assets/js/8.a7bf67bd.js"><link rel="prefetch" href="/assets/js/80.98f7a9b8.js"><link rel="prefetch" href="/assets/js/81.77673ce8.js"><link rel="prefetch" href="/assets/js/82.6da9e559.js"><link rel="prefetch" href="/assets/js/83.a226a6f5.js"><link rel="prefetch" href="/assets/js/84.149db13e.js"><link rel="prefetch" href="/assets/js/85.a0f59112.js"><link rel="prefetch" href="/assets/js/86.b3f3292d.js"><link rel="prefetch" href="/assets/js/87.17a04e28.js"><link rel="prefetch" href="/assets/js/88.0a2115b8.js"><link rel="prefetch" href="/assets/js/89.31db3c7e.js"><link rel="prefetch" href="/assets/js/9.90e0f26f.js"><link rel="prefetch" href="/assets/js/90.c81c9788.js"><link rel="prefetch" href="/assets/js/91.244d9fab.js"><link rel="prefetch" href="/assets/js/92.40c1f6fa.js"><link rel="prefetch" href="/assets/js/93.6e11e9dd.js"><link rel="prefetch" href="/assets/js/94.5f3326b2.js"><link rel="prefetch" href="/assets/js/95.ee7c907b.js"><link rel="prefetch" href="/assets/js/96.1cc91fcf.js"><link rel="prefetch" href="/assets/js/97.380010c8.js"><link rel="prefetch" href="/assets/js/98.dba928b5.js"><link rel="prefetch" href="/assets/js/99.bcb7b171.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ccac5a78.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Some of my notes</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/shell/" class="nav-link">
+  Shell
+</a></div><div class="nav-item"><a href="/open-source/" class="nav-link router-link-active">
+  open-source
+</a></div><div class="nav-item"><a href="/mac/" class="nav-link">
+  Mac
+</a></div><div class="nav-item"><a href="/oracle/" class="nav-link">
+  Oracle
+</a></div><div class="nav-item"><a href="/oci/" class="nav-link">
+  OCI
+</a></div><div class="nav-item"><a href="/spring/" class="nav-link">
+  Spring
+</a></div><div class="nav-item"><a href="/more/" class="nav-link">
+  More
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/shell/" class="nav-link">
+  Shell
+</a></div><div class="nav-item"><a href="/open-source/" class="nav-link router-link-active">
+  open-source
+</a></div><div class="nav-item"><a href="/mac/" class="nav-link">
+  Mac
+</a></div><div class="nav-item"><a href="/oracle/" class="nav-link">
+  Oracle
+</a></div><div class="nav-item"><a href="/oci/" class="nav-link">
+  OCI
+</a></div><div class="nav-item"><a href="/spring/" class="nav-link">
+  Spring
+</a></div><div class="nav-item"><a href="/more/" class="nav-link">
+  More
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>open-source</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/open-source/" aria-current="page" class="sidebar-link">常用开源License</a></li><li><a href="/open-source/aria2.html" class="sidebar-link">aria2 aria2c</a></li><li><a href="/open-source/curl.html" class="sidebar-link">curl 使用</a></li><li><a href="/open-source/git.html" class="sidebar-link">git 基本用法</a></li><li><a href="/open-source/jenkins.html" class="sidebar-link">jenkins tutorial</a></li><li><a href="/open-source/nginx.html" class="sidebar-link">nginx 常用配置</a></li><li><a href="/open-source/node.html" class="sidebar-link">nodejs</a></li><li><a href="/open-source/ssh.html" aria-current="page" class="active sidebar-link">ssh 常用功能</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/open-source/ssh.html#ssh-使用http代理" class="sidebar-link">ssh 使用http代理</a></li><li class="sidebar-sub-header"><a href="/open-source/ssh.html#ssh-三种代理功能" class="sidebar-link">ssh 三种代理功能</a></li><li class="sidebar-sub-header"><a href="/open-source/ssh.html#ssh-port-forward" class="sidebar-link">ssh port forward</a></li><li class="sidebar-sub-header"><a href="/open-source/ssh.html#session-droped" class="sidebar-link">Session droped</a></li></ul></li><li><a href="/open-source/ssh-key-pair.html" class="sidebar-link">SSH Key Pair</a></li><li><a href="/open-source/vim.html" class="sidebar-link">vi vim tutorial</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="ssh-使用http代理"><a href="#ssh-使用http代理" class="header-anchor">#</a> ssh 使用http代理</h2> <p>存在A B C三台主机， 由于安全因素或者其他，A不能直接与C通信。 但是存在B可以与A,C通信。 则现在需要在A上通过ssh, 假设B已经搭建好一个http代理，专门来代理ssh访问C的服务。具体方法分为2种常见做法:</p> <ul><li>1.通过软件 corkscrew作为proxy的客户端</li> <li>2.通过ncat作为proxy的客户端
+不过最终本质是一样的，ssh通过命令 ssh -o ProxyCommand=&quot;xxx&quot;的形式设置代理信息，即可使用,过程是对用户透明无感的。</li></ul> <blockquote><p>ssh -i /Users/felix/Dafeng/AWS/aws-seoul-key-pair.pem  ec2-user@54.180.125.138  -o  ProxyCommand=&quot;corkscrew 10.188.53.53 80 %h %p&quot;</p></blockquote> <h3 id="ssh方便切换是否使用http-proxy"><a href="#ssh方便切换是否使用http-proxy" class="header-anchor">#</a> ssh方便切换是否使用http_proxy</h3> <ul><li>在.bash_profile里面配置http proxy</li></ul> <div class="language- extra-class"><pre class="language-text"><code># No Proxy
+function proxyoff
+{
+  export http_proxy=&quot;&quot;
+  export https_proxy=&quot;&quot;
+  export ssh_proxy=&quot;&quot;
+}
+
+
+# Proxy
+function proxyon
+{
+  export http_proxy=http://10.188.53.53:80/
+  export https_proxy=$http_proxy
+  export ssh_proxy=&quot;-o ProxyCommand=\&quot;corkscrew 10.188.53.53 80 %h %p\&quot;&quot;
+}
+</code></pre></div><ul><li>在shell脚本里面调用ssh命令</li></ul> <div class="language- extra-class"><pre class="language-text"><code>#!/usr/bin/env bash
+SSH=&quot;ssh -i /Users/felix/Dafeng/AWS/aws-seoul-key-pair.pem  ec2-user@54.180.125.138 $ssh_proxy&quot;
+echo $SSH
+eval $SSH
+</code></pre></div><ul><li>切换是否使用http proxy</li></ul> <blockquote><p>proxyon proxyoff</p></blockquote> <h2 id="ssh-三种代理功能"><a href="#ssh-三种代理功能" class="header-anchor">#</a> ssh 三种代理功能</h2> <ul><li>正向代理（-L）：相当于 iptable 的 port forwarding</li></ul> <div class="language- extra-class"><pre class="language-text"><code>用法1：远程端口映射到其他机器
+HostB 上启动一个 PortB 端口，映射到 HostC:PortC 上，在 HostB 上运行：
+HostB$ ssh -L 0.0.0.0:PortB:HostC:PortC user@HostC
+这时访问 HostB:PortB 相当于访问 HostC:PortC（和 iptable 的 port-forwarding 类似）。
+用法2：本地端口通过跳板映射到其他机器
+HostA 上启动一个 PortA 端口，通过 HostB 转发到 HostC:PortC上，在 HostA 上运行：
+HostA$ ssh -L 0.0.0.0:PortA:HostC:PortC  user@HostB
+这时访问 HostA:PortA 相当于访问 HostC:PortC。
+两种用法的区别是，第一种用法本地到跳板机 HostB 的数据是明文的，而第二种用法一般本地就是 HostA，访问本地的 PortA，数据被 ssh 加密传输给 HostB 又转发给 HostC:PortC
+</code></pre></div><ul><li>反向代理（-R）：相当于 frp 或者 ngrok</li></ul> <div class="language- extra-class"><pre class="language-text"><code>所谓“反向代理”就是让远端启动端口，把远端端口数据转发到本地。
+HostA 将自己可以访问的 HostB:PortB 暴露给外网服务器 HostC:PortC，在 HostA 上运行：
+HostA$ ssh -R HostC:PortC:HostB:PortB  user@HostC
+那么链接 HostC:PortC 就相当于链接 HostB:PortB。使用时需修改 HostC 的 /etc/ssh/sshd_config，添加：
+GatewayPorts yes
+相当于内网穿透，比如 HostA 和 HostB 是同一个内网下的两台可以互相访问的机器，HostC是外网跳板机，HostC不能访问 HostA，但是 HostA 可以访问 HostC。
+那么通过在内网 HostA 上运行 ssh -R 告诉 HostC，创建 PortC 端口监听，把该端口所有数据转发给我（HostA），我会再转发给同一个内网下的 HostB:PortB。
+同内网下的 HostA/HostB 也可以是同一台机器，换句话说就是内网 HostA 把自己可以访问的端口暴露给了外网 HostC。
+按照前文《韦易笑：内网穿透：在公网访问你家的 NAS》中，相当于再 HostA 上启动了 frpc，而再 HostC 上启动了 frps。
+</code></pre></div><ul><li>socks5 代理（-D）：相当于 ss/ss</li></ul> <div class="language- extra-class"><pre class="language-text"><code>在 HostA 的本地 1080 端口启动一个 socks5 服务，通过本地 socks5 代理的数据会通过 ssh 链接先发送给 HostB，再从 HostB 转发送给远程主机：
+HostA$ ssh -D localhost:1080  HostB
+那么在 HostA 上面，浏览器配置 socks5 代理为 127.0.0.1:1080，看网页时就能把数据通过 HostB 代理出去，类似 ss/ssr 版本，只不过用 ssh 来实现。
+</code></pre></div><h2 id="ssh-port-forward"><a href="#ssh-port-forward" class="header-anchor">#</a> ssh port forward</h2> <ul><li>ssh -D 1080 -i /Users/felix/OProject/sshkeybundle/privateKey -C -N opc@140.238.6.13</li></ul> <blockquote><p>note to understand all options for ssh simply type man ssh in a new terminal window. The options used above -D binds the port to the IP, -C compresses the data, -N will not execute commands in the tunnel which is very useful for forwarding other application data through the tunnel.</p></blockquote> <h3 id="hostb-15210-hostc-1521"><a href="#hostb-15210-hostc-1521" class="header-anchor">#</a> HostB:15210-&gt;HostC:1521</h3> <ul><li>ssh -g -f -N -L 15210:HostC:1521 user@HostC</li> <li>ssh -i rsa_key_hisense_crm -g -f -N -L 15001:10.0.11.5:1521 opc@10.0.11.5</li></ul> <h2 id="session-droped"><a href="#session-droped" class="header-anchor">#</a> Session droped</h2> <ul><li>client_loop: send disconnect: Broken pipe prevent</li> <li>~/.ssh/config IPQoS=throughput</li> <li>ServerAliveInterval 120</li> <li>TCPKeepAlive no
+ServerAliveInterval 120 means &quot;If there is no activity for 120 seconds on the connection, send a request to the server, requesting a response.&quot; I believe this is useful because some servers are configured to drop inactive ssh sessions. This keeps the connection active so that doesn't happen.</li></ul> <p>TCPKeepAlive no means &quot;do not send keepalive messages to the server&quot;. If the converse, TCPKeepAlive yes, were set, then the client sends keepalive messages to the server and requires a response in order to maintain its end of the connection. This will detect if the server goes down, reboots, etc. The trouble with this is that if the connection between the client and server is broken for a brief period of time, this will cause the keepalive messages to fail, and the client will end the connection with &quot;broken pipe&quot;.</p> <p>Setting TCPKeepAlive no tells the client to just assume the connection is still good until proven otherwise by a user request, meaning that temporary connection breakages while your ssh term is sitting idle in the background won't kill the connection.</p> <h3 id="reference-link"><a href="#reference-link" class="header-anchor">#</a> Reference Link</h3> <ul><li>https://blog.csdn.net/wxqee/article/details/49234595</li> <li>https://zhuanlan.zhihu.com/p/57630633</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/open-source/node.html" class="prev">
+        nodejs
+      </a></span> <span class="next"><a href="/open-source/ssh-key-pair.html">
+        SSH Key Pair
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.1bdc9612.js" defer></script><script src="/assets/js/2.1ce52c5d.js" defer></script><script src="/assets/js/74.e1fecc35.js" defer></script>
+  </body>
+</html>

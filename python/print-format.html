@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>print format % 占位符 | Some of my notes</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="Hello, VuePress!">
+    <link rel="preload" href="/assets/css/0.styles.ccac5a78.css" as="style"><link rel="preload" href="/assets/js/app.1bdc9612.js" as="script"><link rel="preload" href="/assets/js/2.1ce52c5d.js" as="script"><link rel="preload" href="/assets/js/95.ee7c907b.js" as="script"><link rel="prefetch" href="/assets/js/10.7604792c.js"><link rel="prefetch" href="/assets/js/100.54bb7d3b.js"><link rel="prefetch" href="/assets/js/101.93f1ea81.js"><link rel="prefetch" href="/assets/js/102.44c6dc4c.js"><link rel="prefetch" href="/assets/js/11.fbfee2dd.js"><link rel="prefetch" href="/assets/js/12.47589572.js"><link rel="prefetch" href="/assets/js/13.da8d1a6c.js"><link rel="prefetch" href="/assets/js/14.6a411613.js"><link rel="prefetch" href="/assets/js/15.d3299691.js"><link rel="prefetch" href="/assets/js/16.6529f869.js"><link rel="prefetch" href="/assets/js/17.3abce8c1.js"><link rel="prefetch" href="/assets/js/18.d321540d.js"><link rel="prefetch" href="/assets/js/19.9b0c4efe.js"><link rel="prefetch" href="/assets/js/20.bdfdc27a.js"><link rel="prefetch" href="/assets/js/21.a197c78c.js"><link rel="prefetch" href="/assets/js/22.11e43f38.js"><link rel="prefetch" href="/assets/js/23.8ed6a2cd.js"><link rel="prefetch" href="/assets/js/24.c0aafb51.js"><link rel="prefetch" href="/assets/js/25.a251ec12.js"><link rel="prefetch" href="/assets/js/26.9c73ce08.js"><link rel="prefetch" href="/assets/js/27.0f68e974.js"><link rel="prefetch" href="/assets/js/28.dda890e2.js"><link rel="prefetch" href="/assets/js/29.e4c94034.js"><link rel="prefetch" href="/assets/js/3.50744ef0.js"><link rel="prefetch" href="/assets/js/30.6a2b5705.js"><link rel="prefetch" href="/assets/js/31.dbfd828d.js"><link rel="prefetch" href="/assets/js/32.4ec21949.js"><link rel="prefetch" href="/assets/js/33.31d58b63.js"><link rel="prefetch" href="/assets/js/34.ab44651b.js"><link rel="prefetch" href="/assets/js/35.78e82986.js"><link rel="prefetch" href="/assets/js/36.00c61c64.js"><link rel="prefetch" href="/assets/js/37.1eb74be4.js"><link rel="prefetch" href="/assets/js/38.3e813362.js"><link rel="prefetch" href="/assets/js/39.647b508b.js"><link rel="prefetch" href="/assets/js/4.a7ac34a6.js"><link rel="prefetch" href="/assets/js/40.c783cf11.js"><link rel="prefetch" href="/assets/js/41.40bb819b.js"><link rel="prefetch" href="/assets/js/42.487d2b5b.js"><link rel="prefetch" href="/assets/js/43.cd2ed31c.js"><link rel="prefetch" href="/assets/js/44.212273f2.js"><link rel="prefetch" href="/assets/js/45.2d56bfe3.js"><link rel="prefetch" href="/assets/js/46.745a74a8.js"><link rel="prefetch" href="/assets/js/47.20d54662.js"><link rel="prefetch" href="/assets/js/48.24df1f1f.js"><link rel="prefetch" href="/assets/js/49.efe4f912.js"><link rel="prefetch" href="/assets/js/5.a6bf4d86.js"><link rel="prefetch" href="/assets/js/50.240683fd.js"><link rel="prefetch" href="/assets/js/51.69d75721.js"><link rel="prefetch" href="/assets/js/52.3e48cd30.js"><link rel="prefetch" href="/assets/js/53.3f5efb27.js"><link rel="prefetch" href="/assets/js/54.84e054cb.js"><link rel="prefetch" href="/assets/js/55.dd74fcad.js"><link rel="prefetch" href="/assets/js/56.2cdddc9b.js"><link rel="prefetch" href="/assets/js/57.31388f8e.js"><link rel="prefetch" href="/assets/js/58.1cf23f34.js"><link rel="prefetch" href="/assets/js/59.a66bc6e3.js"><link rel="prefetch" href="/assets/js/6.5666a477.js"><link rel="prefetch" href="/assets/js/60.2f9ad10d.js"><link rel="prefetch" href="/assets/js/61.ca08e66b.js"><link rel="prefetch" href="/assets/js/62.73b03dc4.js"><link rel="prefetch" href="/assets/js/63.95143f10.js"><link rel="prefetch" href="/assets/js/64.ca12f361.js"><link rel="prefetch" href="/assets/js/65.c9868457.js"><link rel="prefetch" href="/assets/js/66.d961caec.js"><link rel="prefetch" href="/assets/js/67.f4463c14.js"><link rel="prefetch" href="/assets/js/68.763e362c.js"><link rel="prefetch" href="/assets/js/69.eb5440bc.js"><link rel="prefetch" href="/assets/js/7.e50c1d2e.js"><link rel="prefetch" href="/assets/js/70.13b90785.js"><link rel="prefetch" href="/assets/js/71.fb6f6189.js"><link rel="prefetch" href="/assets/js/72.17356d70.js"><link rel="prefetch" href="/assets/js/73.8037a311.js"><link rel="prefetch" href="/assets/js/74.e1fecc35.js"><link rel="prefetch" href="/assets/js/75.75ac11fd.js"><link rel="prefetch" href="/assets/js/76.2a376568.js"><link rel="prefetch" href="/assets/js/77.2f912849.js"><link rel="prefetch" href="/assets/js/78.cb45b9f4.js"><link rel="prefetch" href="/assets/js/79.e99f3946.js"><link rel="prefetch" href="/assets/js/8.a7bf67bd.js"><link rel="prefetch" href="/assets/js/80.98f7a9b8.js"><link rel="prefetch" href="/assets/js/81.77673ce8.js"><link rel="prefetch" href="/assets/js/82.6da9e559.js"><link rel="prefetch" href="/assets/js/83.a226a6f5.js"><link rel="prefetch" href="/assets/js/84.149db13e.js"><link rel="prefetch" href="/assets/js/85.a0f59112.js"><link rel="prefetch" href="/assets/js/86.b3f3292d.js"><link rel="prefetch" href="/assets/js/87.17a04e28.js"><link rel="prefetch" href="/assets/js/88.0a2115b8.js"><link rel="prefetch" href="/assets/js/89.31db3c7e.js"><link rel="prefetch" href="/assets/js/9.90e0f26f.js"><link rel="prefetch" href="/assets/js/90.c81c9788.js"><link rel="prefetch" href="/assets/js/91.244d9fab.js"><link rel="prefetch" href="/assets/js/92.40c1f6fa.js"><link rel="prefetch" href="/assets/js/93.6e11e9dd.js"><link rel="prefetch" href="/assets/js/94.5f3326b2.js"><link rel="prefetch" href="/assets/js/96.1cc91fcf.js"><link rel="prefetch" href="/assets/js/97.380010c8.js"><link rel="prefetch" href="/assets/js/98.dba928b5.js"><link rel="prefetch" href="/assets/js/99.bcb7b171.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ccac5a78.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Some of my notes</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/shell/" class="nav-link">
+  Shell
+</a></div><div class="nav-item"><a href="/open-source/" class="nav-link">
+  open-source
+</a></div><div class="nav-item"><a href="/mac/" class="nav-link">
+  Mac
+</a></div><div class="nav-item"><a href="/oracle/" class="nav-link">
+  Oracle
+</a></div><div class="nav-item"><a href="/oci/" class="nav-link">
+  OCI
+</a></div><div class="nav-item"><a href="/spring/" class="nav-link">
+  Spring
+</a></div><div class="nav-item"><a href="/more/" class="nav-link">
+  More
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/shell/" class="nav-link">
+  Shell
+</a></div><div class="nav-item"><a href="/open-source/" class="nav-link">
+  open-source
+</a></div><div class="nav-item"><a href="/mac/" class="nav-link">
+  Mac
+</a></div><div class="nav-item"><a href="/oracle/" class="nav-link">
+  Oracle
+</a></div><div class="nav-item"><a href="/oci/" class="nav-link">
+  OCI
+</a></div><div class="nav-item"><a href="/spring/" class="nav-link">
+  Spring
+</a></div><div class="nav-item"><a href="/more/" class="nav-link">
+  More
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>python</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/python/" aria-current="page" class="sidebar-link">python tutorial</a></li><li><a href="/python/logging.html" class="sidebar-link">logging example</a></li><li><a href="/python/os-popen.html" class="sidebar-link">os.popen连续执行多条linux命令</a></li><li><a href="/python/print-format.html" aria-current="page" class="active sidebar-link">print format % 占位符</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>注：我使用的是python3.6版本，所有的代码都是基于3.6来执行的</p> <h3 id="常见的占位符有"><a href="#常见的占位符有" class="header-anchor">#</a> %常见的占位符有：</h3> <blockquote><p>%s 字符串
+%d 整数
+%f 浮点数</p></blockquote> <h3 id="废话不多说-上代码"><a href="#废话不多说-上代码" class="header-anchor">#</a> 废话不多说 上代码</h3> <div class="language- extra-class"><pre class="language-text"><code>&gt;&gt;&gt;name = 'nancy'
+&gt;&gt;&gt;age = 20
+&gt;&gt;&gt;salary = 100.555
+&gt;&gt;&gt;print('你的姓名是：%s' % name)
+&gt;&gt;&gt;your name is nancy
+&gt;&gt;&gt;print('your age is :%d' % age)
+&gt;&gt;&gt;your age is 20
+&gt;&gt;&gt;print('your salary is :%.2f' % salary)
+&gt;&gt;&gt;your salary is 100.56
+&gt;&gt;&gt;print('your name is %s, and %d years old' % (name, age))   # 传入多个值的时候要用括号括起来
+&gt;&gt;&gt;your name is nancy, and 20 years old
+还有另外的不常用的用法（对于我来说不常用…）
+
+&gt;&gt;&gt;print('i am %(name)s,and %(age)d years old' % {'name': 'nancy', 'age': 20})
+&gt;&gt;&gt;i am nancy,and 20 years old
+</code></pre></div><p>关于%还有很多用法，感兴趣的朋友可以自行了解一下</p> <h3 id="format-不带编号"><a href="#format-不带编号" class="header-anchor">#</a> format 不带编号，’{}’</h3> <p>带数字编号，可调换顺序，即’{0}’,’{1}’
+带关键字，即’{name}’,’{age}’</p> <div class="language- extra-class"><pre class="language-text"><code>&gt;&gt;&gt;print('i am {}, and {} years old, my salary is {}'.format('nancy', 20, 100.555))
+&gt;&gt;&gt;i am nancy, and 20 years old, my salary is 100.555
+&gt;&gt;&gt;print('i am {0}, and {1}.True name is {0}'.format('nancy', 20))
+&gt;&gt;&gt;i am nancy, and 20.True name is nancy
+&gt;&gt;&gt;print('i am {name}, and {age}'.format(age=20, name='nancy'))
+&gt;&gt;&gt;i am nancy, and 20
+</code></pre></div><h3 id="关于format的变形用法"><a href="#关于format的变形用法" class="header-anchor">#</a> 关于format的变形用法</h3> <div class="language- extra-class"><pre class="language-text"><code>&gt;&gt;&gt;a = 'hello'
+&gt;&gt;&gt;b = 'python'
+&gt;&gt;&gt;print(f'{a} {b}')
+&gt;&gt;&gt;hello python
+</code></pre></div><h3 id="番外篇1"><a href="#番外篇1" class="header-anchor">#</a> 番外篇1</h3> <p>前一阵python3.8版本推出，简单介绍一个新功能</p> <div class="language- extra-class"><pre class="language-text"><code>&gt;&gt;&gt;name = 'john'
+&gt;&gt;&gt;name2 = 'william'
+&gt;&gt;print(f'{name=}')
+&gt;&gt;print(f'{name2=}')
+输出
+&gt;&gt;&gt;name=john
+&gt;&gt;&gt;name2=william
+</code></pre></div><p>python3.8在f-strings中，使用=打印时，=左边是变量名，右边默认就是为变量的值，而且不用填写。
+因为我也没有装3.8，也是道听途说，如果感兴趣可以自己下载3.8版本try一try，哈</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/python/os-popen.html" class="prev">
+        os.popen连续执行多条linux命令
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.1bdc9612.js" defer></script><script src="/assets/js/2.1ce52c5d.js" defer></script><script src="/assets/js/95.ee7c907b.js" defer></script>
+  </body>
+</html>

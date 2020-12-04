@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>traceroute | Some of my notes</title>
+    <meta name="generator" content="VuePress 1.5.4">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="description" content="Hello, VuePress!">
+    <link rel="preload" href="/assets/css/0.styles.ccac5a78.css" as="style"><link rel="preload" href="/assets/js/app.1bdc9612.js" as="script"><link rel="preload" href="/assets/js/2.1ce52c5d.js" as="script"><link rel="preload" href="/assets/js/99.bcb7b171.js" as="script"><link rel="prefetch" href="/assets/js/10.7604792c.js"><link rel="prefetch" href="/assets/js/100.54bb7d3b.js"><link rel="prefetch" href="/assets/js/101.93f1ea81.js"><link rel="prefetch" href="/assets/js/102.44c6dc4c.js"><link rel="prefetch" href="/assets/js/11.fbfee2dd.js"><link rel="prefetch" href="/assets/js/12.47589572.js"><link rel="prefetch" href="/assets/js/13.da8d1a6c.js"><link rel="prefetch" href="/assets/js/14.6a411613.js"><link rel="prefetch" href="/assets/js/15.d3299691.js"><link rel="prefetch" href="/assets/js/16.6529f869.js"><link rel="prefetch" href="/assets/js/17.3abce8c1.js"><link rel="prefetch" href="/assets/js/18.d321540d.js"><link rel="prefetch" href="/assets/js/19.9b0c4efe.js"><link rel="prefetch" href="/assets/js/20.bdfdc27a.js"><link rel="prefetch" href="/assets/js/21.a197c78c.js"><link rel="prefetch" href="/assets/js/22.11e43f38.js"><link rel="prefetch" href="/assets/js/23.8ed6a2cd.js"><link rel="prefetch" href="/assets/js/24.c0aafb51.js"><link rel="prefetch" href="/assets/js/25.a251ec12.js"><link rel="prefetch" href="/assets/js/26.9c73ce08.js"><link rel="prefetch" href="/assets/js/27.0f68e974.js"><link rel="prefetch" href="/assets/js/28.dda890e2.js"><link rel="prefetch" href="/assets/js/29.e4c94034.js"><link rel="prefetch" href="/assets/js/3.50744ef0.js"><link rel="prefetch" href="/assets/js/30.6a2b5705.js"><link rel="prefetch" href="/assets/js/31.dbfd828d.js"><link rel="prefetch" href="/assets/js/32.4ec21949.js"><link rel="prefetch" href="/assets/js/33.31d58b63.js"><link rel="prefetch" href="/assets/js/34.ab44651b.js"><link rel="prefetch" href="/assets/js/35.78e82986.js"><link rel="prefetch" href="/assets/js/36.00c61c64.js"><link rel="prefetch" href="/assets/js/37.1eb74be4.js"><link rel="prefetch" href="/assets/js/38.3e813362.js"><link rel="prefetch" href="/assets/js/39.647b508b.js"><link rel="prefetch" href="/assets/js/4.a7ac34a6.js"><link rel="prefetch" href="/assets/js/40.c783cf11.js"><link rel="prefetch" href="/assets/js/41.40bb819b.js"><link rel="prefetch" href="/assets/js/42.487d2b5b.js"><link rel="prefetch" href="/assets/js/43.cd2ed31c.js"><link rel="prefetch" href="/assets/js/44.212273f2.js"><link rel="prefetch" href="/assets/js/45.2d56bfe3.js"><link rel="prefetch" href="/assets/js/46.745a74a8.js"><link rel="prefetch" href="/assets/js/47.20d54662.js"><link rel="prefetch" href="/assets/js/48.24df1f1f.js"><link rel="prefetch" href="/assets/js/49.efe4f912.js"><link rel="prefetch" href="/assets/js/5.a6bf4d86.js"><link rel="prefetch" href="/assets/js/50.240683fd.js"><link rel="prefetch" href="/assets/js/51.69d75721.js"><link rel="prefetch" href="/assets/js/52.3e48cd30.js"><link rel="prefetch" href="/assets/js/53.3f5efb27.js"><link rel="prefetch" href="/assets/js/54.84e054cb.js"><link rel="prefetch" href="/assets/js/55.dd74fcad.js"><link rel="prefetch" href="/assets/js/56.2cdddc9b.js"><link rel="prefetch" href="/assets/js/57.31388f8e.js"><link rel="prefetch" href="/assets/js/58.1cf23f34.js"><link rel="prefetch" href="/assets/js/59.a66bc6e3.js"><link rel="prefetch" href="/assets/js/6.5666a477.js"><link rel="prefetch" href="/assets/js/60.2f9ad10d.js"><link rel="prefetch" href="/assets/js/61.ca08e66b.js"><link rel="prefetch" href="/assets/js/62.73b03dc4.js"><link rel="prefetch" href="/assets/js/63.95143f10.js"><link rel="prefetch" href="/assets/js/64.ca12f361.js"><link rel="prefetch" href="/assets/js/65.c9868457.js"><link rel="prefetch" href="/assets/js/66.d961caec.js"><link rel="prefetch" href="/assets/js/67.f4463c14.js"><link rel="prefetch" href="/assets/js/68.763e362c.js"><link rel="prefetch" href="/assets/js/69.eb5440bc.js"><link rel="prefetch" href="/assets/js/7.e50c1d2e.js"><link rel="prefetch" href="/assets/js/70.13b90785.js"><link rel="prefetch" href="/assets/js/71.fb6f6189.js"><link rel="prefetch" href="/assets/js/72.17356d70.js"><link rel="prefetch" href="/assets/js/73.8037a311.js"><link rel="prefetch" href="/assets/js/74.e1fecc35.js"><link rel="prefetch" href="/assets/js/75.75ac11fd.js"><link rel="prefetch" href="/assets/js/76.2a376568.js"><link rel="prefetch" href="/assets/js/77.2f912849.js"><link rel="prefetch" href="/assets/js/78.cb45b9f4.js"><link rel="prefetch" href="/assets/js/79.e99f3946.js"><link rel="prefetch" href="/assets/js/8.a7bf67bd.js"><link rel="prefetch" href="/assets/js/80.98f7a9b8.js"><link rel="prefetch" href="/assets/js/81.77673ce8.js"><link rel="prefetch" href="/assets/js/82.6da9e559.js"><link rel="prefetch" href="/assets/js/83.a226a6f5.js"><link rel="prefetch" href="/assets/js/84.149db13e.js"><link rel="prefetch" href="/assets/js/85.a0f59112.js"><link rel="prefetch" href="/assets/js/86.b3f3292d.js"><link rel="prefetch" href="/assets/js/87.17a04e28.js"><link rel="prefetch" href="/assets/js/88.0a2115b8.js"><link rel="prefetch" href="/assets/js/89.31db3c7e.js"><link rel="prefetch" href="/assets/js/9.90e0f26f.js"><link rel="prefetch" href="/assets/js/90.c81c9788.js"><link rel="prefetch" href="/assets/js/91.244d9fab.js"><link rel="prefetch" href="/assets/js/92.40c1f6fa.js"><link rel="prefetch" href="/assets/js/93.6e11e9dd.js"><link rel="prefetch" href="/assets/js/94.5f3326b2.js"><link rel="prefetch" href="/assets/js/95.ee7c907b.js"><link rel="prefetch" href="/assets/js/96.1cc91fcf.js"><link rel="prefetch" href="/assets/js/97.380010c8.js"><link rel="prefetch" href="/assets/js/98.dba928b5.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.ccac5a78.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Some of my notes</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/shell/" class="nav-link router-link-active">
+  Shell
+</a></div><div class="nav-item"><a href="/open-source/" class="nav-link">
+  open-source
+</a></div><div class="nav-item"><a href="/mac/" class="nav-link">
+  Mac
+</a></div><div class="nav-item"><a href="/oracle/" class="nav-link">
+  Oracle
+</a></div><div class="nav-item"><a href="/oci/" class="nav-link">
+  OCI
+</a></div><div class="nav-item"><a href="/spring/" class="nav-link">
+  Spring
+</a></div><div class="nav-item"><a href="/more/" class="nav-link">
+  More
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/linux/" class="nav-link">
+  Linux
+</a></div><div class="nav-item"><a href="/shell/" class="nav-link router-link-active">
+  Shell
+</a></div><div class="nav-item"><a href="/open-source/" class="nav-link">
+  open-source
+</a></div><div class="nav-item"><a href="/mac/" class="nav-link">
+  Mac
+</a></div><div class="nav-item"><a href="/oracle/" class="nav-link">
+  Oracle
+</a></div><div class="nav-item"><a href="/oci/" class="nav-link">
+  OCI
+</a></div><div class="nav-item"><a href="/spring/" class="nav-link">
+  Spring
+</a></div><div class="nav-item"><a href="/more/" class="nav-link">
+  More
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>shell</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/shell/" aria-current="page" class="sidebar-link">首页</a></li><li><a href="/shell/grep-awk-sed.html" class="sidebar-link">Shell 文本处理</a></li><li><a href="/shell/shell-sftp.html" class="sidebar-link">shell sftp upload</a></li><li><a href="/shell/traceroute.html" aria-current="page" class="active sidebar-link">traceroute</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="traceroute"><a href="#traceroute" class="header-anchor">#</a> traceroute</h3> <ul><li>https://tools.ipip.net/traceroute.php</li></ul> <h3 id="aws-muti-region-traffic"><a href="#aws-muti-region-traffic" class="header-anchor">#</a> AWS Muti Region Traffic</h3> <ul><li>Japan Tokyo - singapore</li></ul> <div class="language- extra-class"><pre class="language-text"><code>18.136.209.198
+跳数	IP	主机名	地区（仅供参考）	AS号（仅供参考）	时间（毫秒）
+1	54.150.128.21	ec2-54-150-128-21.ap-northeast-1.compute.amazonaws.com	日本东京都东京 amazon.com	AS16509	7 / 4.2 / 4.8
+2	*	*	N/A	*	*
+3	*	*	N/A	*	*
+4	*	*	N/A	*	*
+5	*	*	N/A	*	*
+6	*	*	N/A	*	*
+7	100.65.9.33	100.65.9.33	共享地址		1.6 / 0.7 / 0.4
+8	52.93.73.217	52.93.73.217	日本东京都东京 amazon.com		0.5 / 0.4 / 0.5
+9	52.93.72.167	52.93.72.167	日本东京都东京 amazon.com		2.4 / 2 / 2
+10	52.93.72.102	52.93.72.102	日本东京都东京 amazon.com		0.5 / 1 / 0.4
+11	100.91.137.2	100.91.137.2	共享地址		70.1 / 70.2 / 70
+12	100.91.3.129	100.91.3.129	共享地址		69.8 / 70 / 69.9
+13	52.93.131.84	52.93.131.84	美国 amazon.com		73.1 / 69.8 / 69.4
+14	100.91.181.20 
+
+100.91.181.20
+100.91.181.30	100.91.181.20
+100.91.181.20
+100.91.181.30	
+共享地址
+共享地址
+共享地址	
+
+70.3
+77.3
+71
+
+15	52.93.8.20	52.93.8.20	新加坡 amazon.com		70.4 / 70.1 / 70
+16	52.93.11.33	52.93.11.33	新加坡 amazon.com		69.3 / 69.3 / 69.4
+17	52.93.11.36	52.93.11.36	新加坡 amazon.com		70.6 / 71.2 / 71.2
+18	52.93.8.71	52.93.8.71	新加坡 amazon.com		69.9 / 69.8 / 73.1
+19	203.83.223.192	203.83.223.192	新加坡 amazon.com	AS16509 / AS38895	70.1 / 70.1 / 70.1
+20	*	*	N/A	*	*
+21	*	*	N/A	*	*
+22	*	*	N/A	*	*
+23	*	*	N/A	*	*
+24	*	*	N/A	*	*
+25	*	*	N/A	*	*
+26	18.136.209.198	ec2-18-136-209-198.ap-southeast-1.compute.amazonaws.com	新加坡 amazon.com	AS16509	69.5 / 69.5 / 69.5
+</code></pre></div><h3 id="oracle-oci-multi-region"><a href="#oracle-oci-multi-region" class="header-anchor">#</a> ORACLE OCI multi region</h3> <ul><li>Korea Souel -Jeddah 158.101.230.44</li></ul> <div class="language- extra-class"><pre class="language-text"><code>158.101.230.44
+跳数	IP	主机名	地区（仅供参考）	AS号（仅供参考）	时间（毫秒）
+1	140.91.214.6	140.91.214.6	韩国首尔 oracle.com	AS31898	0.2 / 0.2 / 0.2
+2	140.91.220.1	140.91.220.1	沙特阿拉伯 oracle.com	AS31898	358 / 358.1 / 358
+3	158.101.230.44	158.101.230.44	沙特阿拉伯麦加省吉达 oracle.com	AS31898	374.7 / 374.6 / 374.6
+</code></pre></div><h3 id=""><a href="#" class="header-anchor">#</a></h3> <ul><li>https://www.sohu.com/a/152330082_262549</li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/shell/shell-sftp.html" class="prev">
+        shell sftp upload
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.1bdc9612.js" defer></script><script src="/assets/js/2.1ce52c5d.js" defer></script><script src="/assets/js/99.bcb7b171.js" defer></script>
+  </body>
+</html>
